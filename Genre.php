@@ -2,21 +2,21 @@
 
 
 class Genre{
-    private string $_nomgenre;
+    private string $_nomGenre;
     private array  $_films; 
 
-    public function __construct (string $nomgenre) {
+    public function __construct (string $nomGenre) {
         
-        $this-> _nomgenre= $nomgenre;
+        $this-> _nomGenre= $nomGenre;
         $this-> _films= []; 
     }
-    public function getNomgenre () {
-        return $this-> _nomgenre;
+    public function getNomGenre () {
+        return $this-> _nomGenre;
     }
     public function getFilms () {
         return $this -> _films;
     }
-    public function ajouterFilm (Film $films) {
+    public function ajoutFilm (Film $films) {
         $this-> _films []= $films;
         foreach ($this->_films as $film);
 
@@ -24,7 +24,7 @@ class Genre{
     }
     public function __toString()
     {
-        return $this-> _nomgenre. $this-> _films= [];
+        return $this-> _nomGenre. $this-> _films= [];
         
     }
 

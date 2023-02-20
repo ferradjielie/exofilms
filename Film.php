@@ -6,12 +6,12 @@
 class Film {
     private Genre $_genre;
     private string $_titre;
-    private string $_datedesortie;
+    private DateTime $_dateDeSortie;
     private int $_duree;
     private Realisateur $_realisateur;
-    private string $_synopsis;
+    private $_synopsis;
 
-    public function __construct (Genre $genre, string $titre, string $datedesortie, int $duree, Realisateur $realisateur, string $synopsis) 
+    public function __construct (Genre $genre, string $titre, string $datedeSortie, int $duree, Realisateur $realisateur, string $synopsis) 
      
     {
     
@@ -45,6 +45,9 @@ public function getRealisateur () {
 }
 public function getSynopsis () {
     return $this -> _synopsis;
+}
+public function __toString () {
+    return $this-> _genre. " ". $this-> _titre. " ". $this->_datedesortie. " ". $this->_duree. " ". $this-> _realisateur. " ". $this-> _synopsis;
 }
 
 

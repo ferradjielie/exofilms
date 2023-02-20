@@ -1,10 +1,7 @@
 <?php
 
 class Realisateur {
-    private string $_prenom;
-    private string $_nom ;
-    private string $_sexe;
-    private string $_datedenaissance;
+    
     private Film $_films;
     
 
@@ -14,8 +11,12 @@ class Realisateur {
         $this -> _nom = $nom;
         $this-> _sexe = $sexe;
         $this -> _datedenaissance= $datedenaissance;
-        $this-> _films = $films;
+        $this-> _films = $films; }
 
+
+       public function ajoutFilm (Film $films) {
+        $this-> _films []= $films;
+        foreach ($this->_films as $film);
 
     }
     public function getPrenom () {
