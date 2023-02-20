@@ -1,16 +1,16 @@
 <?php
 
 class Personne {
-    private string $_prenom;
-    private string $_nom;
-    private string $_sexe;
-    private string $_datedenaissance;
+    protected string $_prenom;
+    protected string $_nom;
+    protected string $_sexe;
+    protected string $_datedenaissance;
 
-    public function __construct (string $prenom, string $nom, string $sexe, $datedenaissance) {
-        $this-> $prenom -> _prenom;
-        $this-> $nom -> _nom;
-        $this -> $sexe-> _nom;
-        $this -> $datedenaissance-> _datedenaissance;
+    public function __construct (string $prenom, string $nom, string $sexe, string $datedenaissance) {
+        $this-> _prenom = $prenom;
+        $this-> _nom = $nom;
+        $this -> _sexe= $sexe;
+        $this -> _datedenaissance= $datedenaissance;
 
     }
 
@@ -32,9 +32,56 @@ class Personne {
         return $this -> _prenom. " ". $this-> _nom. " ". $this-> _sexe. " ". $this-> _datedenaissance;
     }
 }
+/*class Realisateur extends Personne {
+   
+    private Film $films;
+public function __construct (string $prenom, string $nom, string $sexe, string $datedenaissance, Film $films) {
+
+    parent::__construct (string $prenom, string $nom, string $sexe, string $datedenaissance)
+    $this ->  films= $films;
+}
+
+}
 
 
 
+defintions
+
+
+classe
+
+objet
+
+principe d'encapsulation 
+
+
+chainage 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+*/
 
 
 
