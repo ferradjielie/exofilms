@@ -16,9 +16,9 @@ class Genre{
     public function getFilms () {
         return $this -> _films;
     }
-    public function ajoutFilm (Film $films) {
-        $this-> _films []= $films;
-        foreach ($this->_films as $film);
+    public function ajoutFilm (Film $film) {
+        $this-> _films []= $film;
+        
     }
 
     public function afficherFilm(){
@@ -28,7 +28,7 @@ class Genre{
     }
     public function __toString()
     {
-        return $this-> _nomGenre;
+        return $this-> _nomGenre. " ". $this->afficherFilm ();
         
     }
 

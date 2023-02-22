@@ -1,29 +1,47 @@
-<?php 
+<?php
 
-class Casting {
+class Casting
+{
 
     private Role $_role;
-    private Realisateur $_realisateur;
+    private Film $_film;
     private Acteur $_acteur;
 
-    public function __construct (Role $role, Realisateur $realisateur, Acteur $acteur) {
-        $this-> _role = $role;
-        $this-> _realisateur= $role;
-        $this-> _acteur = $acteur; }
+    
 
-        public function getRole () {
-            return $this-> _role;
-        }
-        public function getRealisateur () {
-            return $this -> _realisateur;
-        }
-        public function getActeur () {
-            return $this -> _acteur;
-        }
+    public function __construct(Role $role, Film $film, Acteur $acteur)
+    {
+        $this->_role = $role;
+        $this->_film = $film;
+        $this->_acteur = $acteur;
+        $this->_film->ajouterCasting($this);
+        $this->_role->ajouterCasting($this);
+        $this->_acteur->ajouterCasting($this);
+       
 
-        public function __toString () {
-            return $this-> _role. " ". $this -> _realisateur. " ". $this-> _acteur;
-        }
+
+    }
+
+    public function getRole()
+    {
+        return $this->_role;
+    }
+    public function getFilm()
+    {
+        return $this->_film;
+    }
+    public function getActeur()
+    {
+        return $this->_acteur;
+    }
+
+    
+
+    public function __toString()
+
+    { 
+
+    }
 }
 
 ?>
