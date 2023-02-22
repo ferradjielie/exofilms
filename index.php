@@ -69,7 +69,7 @@ echo $realisateur-> afficherFilm();
 
 // ne pas oublier de creer une classe personne qui aura les memes éléments que realisateur et acteur et les class rea et acteur hériterons de class Personne
 
-
+//
 
 
 
