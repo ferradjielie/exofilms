@@ -18,10 +18,12 @@ $realisateur2 = new Realisateur ("Baz", "Luhrmann", "Masculin","17/09/1962");
 $role = new Role ("Spider-Man");
 $roleExemple = new Role ("Exmple");
 $role2 = new Role ("Nick Carraway");
+$role3 =new Role ("Le Bouffon Vert");
 
 $acteur = new Acteur ("Tobey", "Maguire", "Masculin", "27/06/1975");
 
 $acteur2 = new Acteur ("Tom", "Holland", "Masculin","01/06/1996");
+$acteur3 = new Acteur ("Willem", "Dafoe","Masculin","22/06/1955");
 
 $film = new Film ($genre, "Spider-Man 1",new DateTime("2002-06-12"),121,$realisateur,"Orphelin, Peter Parker est élevé par sa tante May et son oncle Ben dans le borough de Queens à New York. <br>
 Il est victime d'humiliations de la part de ses camarades de lycée, sauf de son meilleur ami Harry Osborn, qui le défend.<br> Après avoir été mordu par une araignée génétiquement modifiée, 
@@ -31,16 +33,23 @@ Mary Jane Watson doit bientôt épouser John Jameson, le fils de J. Jonah Jameso
 Harry Osborn cherche toujours à se venger de l'homme-araignée qu'il tient pour responsable de la mort de son père, Norman Osborn.");
 echo "<br>";
 
-$film3= new Film ($genre2, "Gatsby le Magnifique", new DateTime ("2013-05-15"),142,$realisateur2,"rftyuiuytr");
+$film3= new Film ($genre2, "Gatsby le Magnifique", new DateTime ("2013-05-15"),142,$realisateur2,"En décembre 1929, Nick Carraway, un vétéran de la Première Guerre mondiale, est sous traitement dans un hôpital psychiatrique. Il parle à son docteur de Jay Gatsby, l'homme avec le plus d'espoir qu'il n'ait jamais connu.");
 
-$castingFilm1 = new Casting ($role,$film, $acteur);
-$castingFilm2 = new Casting ($role,$film2, $acteur2);
+
+
+$casting1Film1 = new Casting ($role,$film, $acteur);
+$casting2Film1 = new Casting ($role3,$film, $acteur3);
+//echo $casting2Film1;
+echo "<br>";
+//echo $casting1Film1;
+$casting1Film2 = new Casting ($role,$film2, $acteur2);
 echo "<br>";
 $castingFilm3 = new Casting ($role2, $film3,$acteur);
 
+//echo $film3;
 
-
-
+$realisateur-> afficherFilm();
+die;
 
 
 
@@ -57,13 +66,13 @@ $castingFilm3 = new Casting ($role2, $film3,$acteur);
 // echo "<br>";
 
 
-//echo $acteur->afficherFilmographie();
+ $acteur->afficherFilmographie();
 echo "<br>";
 echo "<br>";
 
-echo $role -> afficherActeur();
+ $role -> afficherActeur();
 
-echo $realisateur-> afficherFilm();
+$realisateur-> afficherFilm();
 
 //afficher grace à var dump
 

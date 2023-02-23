@@ -28,7 +28,7 @@ class Genre{
     }
     public function __toString()
     {
-        return $this-> _nomGenre. " ". $this->afficherFilm ();
+        return  $this-> _nomGenre. " ". $this->afficherFilm ();
         
     }
 
